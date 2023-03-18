@@ -1,8 +1,8 @@
 #include <iostream> 
 
 #include <SFML/Graphics.hpp>
-#include <SFML/Window/Keyboard.hpp>
 
+#include "movemet.hpp"
 
 int main () 
 {
@@ -33,27 +33,8 @@ int main ()
         }
 
         // movement with keyboard events
-
-        if(event.type == sf::Event::KeyPressed)
-        {
-            // moving the rectangle based on the key 
-            if(event.key.code == sf::Keyboard::Left)
-            {
-                rectangle.move(-1, 0);
-            }
-            if(event.key.code == sf::Keyboard::Right)
-            {
-                rectangle.move(1,0);
-            }
-            if(event.key.code == sf::Keyboard::Up)
-            {
-                rectangle.move(0,-1);
-            }
-            if(event.key.code == sf::Keyboard::Down)
-            {
-                rectangle.move(0,1);
-            }
-        }
+        moveRectangle(rectangle, 1);
+        
 
 //     if (event.type == sf::Event::KeyPressed)
 //     {
