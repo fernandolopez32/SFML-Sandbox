@@ -1,6 +1,7 @@
 #include <iostream> 
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Window/Keyboard.hpp>
 
 
 int main () 
@@ -30,6 +31,51 @@ int main ()
             window.close();
             }
         }
+
+        // movement with keyboard events
+
+        if(event.type == sf::Event::KeyPressed)
+        {
+            // moving the rectangle based on the key 
+            if(event.key.code == sf::Keyboard::Left)
+            {
+                rectangle.move(-1, 0);
+            }
+            if(event.key.code == sf::Keyboard::Right)
+            {
+                rectangle.move(1,0);
+            }
+            if(event.key.code == sf::Keyboard::Up)
+            {
+                rectangle.move(0,-1);
+            }
+            if(event.key.code == sf::Keyboard::Down)
+            {
+                rectangle.move(0,1);
+            }
+        }
+
+//     if (event.type == sf::Event::KeyPressed)
+//     {
+//         // Move the rectangle based on arrow key pressed
+//         if (event.key.code == sf::Keyboard::Left)
+//         {
+//             rectangle.move(-10, 0);
+//         }
+//         else if (event.key.code == sf::Keyboard::Right)
+//         {
+//             rectangle.move(10, 0);
+//         }
+//         else if (event.key.code == sf::Keyboard::Up)
+//         {
+//             rectangle.move(0, -10);
+//         }
+//         else if (event.key.code == sf::Keyboard::Down)
+//         {
+//             rectangle.move(0, 10);
+//         }
+//     }
+// }
 
         
         // moving rectangle every second
