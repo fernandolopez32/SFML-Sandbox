@@ -4,12 +4,14 @@
 
 #include "movemet.hpp"
 
+#include "windowManager.hpp"
+
 int main () 
 {
     // cout<< "sanity check" << endl;
 
 // MAKING A WINDOW OF SIZE 800PX BY 600PX WITH A TITLE OF SFML-SANDOBX
-    sf::RenderWindow window(sf::VideoMode(800, 600), "SFML-SANDBOX");
+    // sf::RenderWindow window(sf::VideoMode(800, 600), "SFML-SANDBOX");
 
       // drawing a rectangle on the screen 
     sf::RectangleShape rectangle (sf::Vector2f(100, 50));
@@ -18,6 +20,8 @@ int main ()
 
     sf::Clock clock;
 
+
+    sf::RenderWindow& window = createWindow(800, 600, "SFML-SANDBOX");
 
     while(window.isOpen())
     {
