@@ -9,8 +9,8 @@ class Player
         //constructor 
         Player(AssetManager& assetManager); 
         // set position of player 
-        void update(float deltaTime);
-        void setPosition(float x, float y);
+        // void update(float deltaTime);
+        // void setPosition(float x, float y);
         void draw(sf::RenderWindow& window);
     private:
         sf::Sprite m_sprite;
