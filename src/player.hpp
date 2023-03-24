@@ -7,7 +7,7 @@ class Player
 {
     public:
         //constructor 
-        Player(); 
+        Player(AssetManager& assetManager); 
         // set position of player 
         void update(float deltaTime);
         void setPosition(float x, float y);
